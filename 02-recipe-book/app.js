@@ -67,3 +67,5 @@ const renderRecipes = function (recipe) {
     recipeListEl.innerHTML = recipeHTML;
 
 }
+
+init()
