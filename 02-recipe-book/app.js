@@ -25,6 +25,29 @@ async function init() {
 }
 
 
+const getIngredientsList = function (recipe) {
+
+    const ingredients = [];
+
+    for (let i = 1; i <= 20; i++) {
+
+        const ingredient = recipe[`strIngredient${i}`];
+        const measure = recipe[`strMeasure${i}`];
+
+        if (ingredient && ingredient.trim() !== '') {
+
+            ingredients.push(`${measure} ${ingredient}`);
+        }
+    }
+
+    return ingredients.join('، ');
+
+}
+
+
 const renderRecipes = function () {
+
+
+
 
 }
