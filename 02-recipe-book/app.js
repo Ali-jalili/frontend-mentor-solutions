@@ -45,9 +45,25 @@ const getIngredientsList = function (recipe) {
 }
 
 
-const renderRecipes = function () {
+const renderRecipes = function (recipe) {
 
 
+    const ingredientsText = getIngredientsList(recipe);
 
+    const recipeHTML = `
+        <li class="recipe-item">
+            <img 
+                src="${recipe.strMealThumb}" 
+                alt="${recipe.strMeal}" 
+            />
+            <h2>${recipe.strMeal}</h2>
+            <p>
+                <strong>مواد اولیه:</strong> ${ingredientsText}
+            </p>
+            <a href="${recipe.strSource}" target="_blank">مشاهده دستورالعمل کامل</a>
+        </li>
+    `;
+
+    recipeListEl.innerHTML = recipeHTML;
 
 }
